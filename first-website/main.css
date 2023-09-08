@@ -1,0 +1,33 @@
+body {
+background-color: rgb(123, 210, 149);
+margin: 20px;
+font-size: 30px;
+}
+
+p {
+    color: rgb(150, 179, 233);
+    background-color:rgb(239, 240, 232);
+    padding: 30px;
+    margin: 30px;
+}
+
+li {
+    color: rgb(255, 122, 231);
+}
+
+ol {
+    background-color:honeydew;
+}
+#introduction{
+    font-size: 40px;
+   /* background-color:rgb(207, 113, 45);
+   */
+}
+    .introduction{
+        background-color: brown;
+    }
+
+    .introduction{
+        background-color: cornsilk;
+        border: 60px dashed rgb(235, 149, 83);   
+    }

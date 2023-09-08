@@ -1,0 +1,37 @@
+body {
+    color: var(--main-color);
+    background: var(--bg-color);
+}
+*{
+    padding: 1px;
+    margin: 10px;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior:smooth;
+}
+
+:root{
+    --main-color:#ff702a;
+    --text-color:#fff;
+    --bg-color:#1e1c2a;
+    --big-font:5rem;
+    --h2-font:2.25rem;
+    --p-font:0.9rem;
+}
+
+*::selection {
+    background: var(--main-color);
+    color: #fff;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 30px 170px;
+}
