@@ -1,8 +1,14 @@
 body {
-    background-color: rgb(244, 231, 159);
+    background-color: rgb(77, 101, 77);
     margin: 20px;
-    font-size: 30px;
+    font-size: 30;
+    }
+
+    .img-travel{
+        width: 300px;
     }
     
+    h1 {
+        color:rgb(34, 56, 38)
+    }
    
-        }
