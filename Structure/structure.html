@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Floor Plan</title>
+    <link rel="stylesheet" href="structure.css">
+    <style>
+         
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+       
+        .restaurant {
+            display: flex;
+            flex-wrap: wrap;
+            width: 800px;
+            margin: 20px auto;
+            background-color: #f0f0f0;
+            border: 2px solid #ccc;
+            padding: 20px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        .table {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .bar {
+            width: 30px;
+            height: 100px;
+            background-color: #e74c3c;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .label {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        
+    </style>
+   
+    
+     <div class="restaurant">
+        <!-- Bar Area -->
+    <div class="bar"></div>
+        <!-- Tables -->
+        <div class="table">
+            <div class="label">Table 1</div>
+        </div>
+        <div class="table">
+            <div class="label">Table 2</div>
+        </div>
+        <div class="table">
+            <div class="label">Table 3</div>
+        </div>
+        <div class="table">
+            <div class="label">Table 4</div>
+        </div>
+        <div class="table">
+            <div class="label">Table 5</div>
+        </div>
+        <div class="table">
+            <div class="label">Table 6</div>
+        </div>
+        
+        <div class="table">
+            <div class="label">Table 7</div>
+        </div>
+        <div class="table">
+            <div class="label">Table 8</div>
+        </div>
+        <div class="table">
+            <div class="label">Table 9</div>
+        </div>
+        <div class="table">
+            <div class="label">Table 10</div>
+        </div>
+        <div class="table">
+            <div class="label">Table 11</div>
+        </div>
+        <div class="table">
+            <div class="label">Table 12</div>
+        </div>
+    </div>
+    
+    
+    <script>
+        // Wait for the document to be fully loaded before attaching event listeners
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get all elements with the class "table"
+            var tables = document.querySelectorAll(".table");
+
+            // Add a click event listener to each table
+            tables.forEach(function (table) {
+                table.addEventListener("click", function () {
+                    // Toggle the background color when clicked
+                    if (table.style.backgroundColor === "" || table.style.backgroundColor === "white") {
+                        table.style.backgroundColor = "#ffcc00"; // Change to the color you want
+                    } else {
+                        table.style.backgroundColor = "white";
+                    }
+                });
+            });
+        });
+    </script>
+       
+    
+       
+</head>
+<body>
+    
+    
+   
+    
+</body>
+<footer>
+     <!-- Menu Box -->
+     <div class="menu-box">
+        <h2>Menu</h2>
+        <ul>
+            <li>Item 1: $10</li>
+            <li>Item 2: $12</li>
+            <li>Item 3: $15</li>
+            <!-- Add more menu items as needed -->
+        </ul>
+    </div>
+</div>
+</footer>
+</html>

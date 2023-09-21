@@ -1,0 +1,28 @@
+
+
+.menu-box {
+    background-color: #ff4242;
+    border: 2px solid #ccc;
+    padding: 20px;
+    width: 200px; /* Adjust the width as needed */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-top: 20px; /* Adjust the margin to position the menu box */
+}
+
+.menu-box h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.menu-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-box li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+
