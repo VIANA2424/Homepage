@@ -1,10 +1,14 @@
 body {
+  cursor: url("icon/Banana.cur") 20 20, auto;
+}
+
+body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #f5f5f5;
+  background-color: #ffffc8;
 }
 .memory-card-container {
   display: flex;
@@ -48,7 +52,7 @@ body {
 }
 
 .card-back {
-  background-color: #ff6347;
+  background-color: #e18676;
   transform: rotateY(180deg);
 }
 
@@ -64,7 +68,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #f5f5f5;
+  background-color: #faffcf;
 }
 
 .memory-card-container {
@@ -110,7 +114,7 @@ body {
 }
 
 .card-back {
-  background-color: #ff6347;
+  background-color: #cb796a;
   transform: rotateY(180deg);
 }
 
