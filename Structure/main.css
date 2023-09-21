@@ -1,6 +1,8 @@
 body {
   cursor: url("icon/Banana.cur") 20 20, auto;
+  
 }
+
 
 body {
   display: flex;
@@ -124,3 +126,36 @@ img {
   border-radius: 8px;
 }
 
+
+.moving-element {
+  width: 50px;
+  height: 50px;
+  background-color: #ff6347; /* Reddish color, you can change it */
+  position: absolute;
+  animation: moveAcross 10s linear infinite; /* Adjust duration (10s) as needed */
+}
+
+@keyframes moveAcross {
+  0% {
+      left: -50px;
+  }
+  100% {
+      left: 100%; /* Move the element to the right edge of the viewport */
+  }
+}
+
+.moving-gif {
+  width: 50px; /* Adjust the width and height as needed */
+  height: auto; /* Automatically scales the height to maintain aspect ratio */
+  position: absolute;
+  animation: moveAcross 10s linear infinite; /* Adjust duration (10s) as needed */
+}
+
+@keyframes moveAcross {
+  0% {
+      left: -50px;
+  }
+  100% {
+      left: 100%; /* Move the element to the right edge of the viewport */
+  }
+}
