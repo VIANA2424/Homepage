@@ -1,0 +1,75 @@
+*{
+    box-sizing: border-box;
+    
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.dreamscape-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 1s;
+}
+
+.dreamscape {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.dreamscape-1 {
+    background: #3498db;
+}
+
+.dreamscape-2 {
+    background: #e74c3c;
+}
+
+.dreamscape-3 {
+    background: #27ae60;
+}
+
+@media screen and (min-width: 768px) {
+    .dreamscape-container {
+        background: #3498db;
+    }
+
+    .dreamscape-1 {
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .dreamscape-container {
+        background: #e74c3c;
+    }
+
+    .dreamscape-2 {
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .dreamscape-container {
+        background: #27ae60;
+    }
+
+    .dreamscape-3 {
+        opacity: 1;
+    }
+}

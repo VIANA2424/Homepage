@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+}
+
+img {
+   /* max-width: 100%;*/
+   max-width: 600px;
+}
+p {
+    background-color:antiquewhite;
+    padding:30px;
+    width: 600px;
+}
+.featured-image {
+    width: 100%;
+    max-width: 600px;
+}

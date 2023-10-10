@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color:rgb(40, 64, 110);
+
+}
+
+.greeting {
+    background-color: darkgreen;
+    padding: 2opx;
+    width: 100px;
+    height: 100px;
+    font-size: 10px;
+    transition: all 1s;
+    
+}
+.mobile {
+    /*display:none;*/
+opacity: 0;
+}
+
+
+/*max-width media queries are desktop-first*/
+/*min-width media queries are mobile-first*/
+
+
+@media screen and (max-width:900px){
+body {
+    background-color: darkslateblue;
+}
+}
+.greeting {
+    background-color: indianred;
+    width: 200px;
+    height: 200px;
+    font-size: 20px;
+
+}
+@media screen and (max-width:700px)  {
+body {
+    background-color: darkorange;
+}
+.greeting {
+    background-color: indianred;
+    width: 300px;
+    height: 300px;
+    font-size: 30px;
+}
+@media screen and (max-width:500px)  {
+
+}
+.greeting {
+    background-color: indianred;
+    width: 400px;
+    height: 400px;
+    font-size: 40px;
+}
+.mobile {
+    opacity:1;
+}
+.desktop {
+    opacity: 0;
+}
+}
