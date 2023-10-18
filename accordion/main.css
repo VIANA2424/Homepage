@@ -15,8 +15,110 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background 1s;
+    background: url('starry-sky-2051448_1280.jpg') no-repeat center;
+    background-size: cover;
+    
 }
+.dream-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px; /* Increase the font size to make it bigger */
+    font-family: 'Comic Sans MS', cursive; /* Change the font family to 'Comic Sans MS' or any other you prefer */
+    color: white;
+    opacity: 0;
+    animation: bounceIn 10s ease infinite;
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateY(-50px);
+    }
+    70% {
+        opacity: 1;
+        transform: translate(-50%, -50%) translateY(10px);
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+@keyframes rainbowColor {
+    0% {
+        color: rgb(214, 190, 236);
+    }
+    14% {
+        color: rgb(249, 220, 167);
+    }
+    28% {
+        color: yellow;
+    }
+    42% {
+        color: rgb(171, 228, 171);
+    }
+    57% {
+        color: rgb(154, 154, 251);
+    }
+    71% {
+        color: rgb(213, 187, 232);
+    }
+    85% {
+        color: rgb(237, 193, 165);
+    }
+    100% {
+        color: rgb(236, 162, 162);
+    }
+}
+.rain {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 10px; /* Adjust the width of each raindrop */
+    height: 10px; /* Adjust the height of each raindrop */
+    opacity: 0.5;
+    animation: fall 6s linear infinite;
+}
+
+.raindrop {
+    position: absolute;
+    background: white;
+    opacity: 0.5;
+    animation: fall 2s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateX(-50%) translateY(0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(-50%) translateY(100vh); /* Move to the bottom of the container */
+        opacity: 0; /* Fade out at the bottom */
+    }
+}
+
+/* Adjust the positioning of each raindrop */
+.raindrop:nth-child(1) {
+    left: 10%; /* Adjust the left position of the first raindrop */
+    width: 8px;
+    height: 8px;
+}
+
+.raindrop:nth-child(2) {
+    left: 30%; /* Adjust the left position of the second raindrop */
+    width: 6px;
+    height: 6px;
+}
+
+.raindrop:nth-child(3) {
+    left: 50%; /* Adjust the left position of the third raindrop */
+    width: 10px;
+    height: 10px;
+}
+
 
 .dreamscape {
     position: absolute;
@@ -33,43 +135,222 @@ body {
 }
 
 .dreamscape-1 {
-    background: #3498db;
+    background: url('ocean-3605547_1280.jpg') no-repeat center;
+    background-size: cover;
+    font-family: 'Comic Sans MS', cursive; /* Change the font family */
+    color: #6c8698; /* Change the font color */
+    position: relative;
+
+    
 }
+
+.water-elements {
+    position: absolute; /* Position the tear drops relative to the container */
+    width: 100%;
+    height: 100%;
+}
+.tear-drop-left, .tear-drop-right {
+    position: absolute;
+    background: url('tear-png-33473.png') no-repeat center;
+    background-size: contain;
+    width: 80px; /* Adjust the size of the tear drops */
+    height: 80px;
+    animation: float 6s alternate infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) translateX(0); /* Start and end at the same position */
+    }
+    25% {
+        transform: translateY(-20px) translateX(-20px); /* Move diagonally up-left */
+    }
+    50% {
+        transform: translateY(0) translateX(0); /* Return to the starting position */
+    }
+    75% {
+        transform: translateY(-20px) translateX(20px); /* Move diagonally up-right */
+    }
+}
+
+.tear-drop-left, .tear-drop-right {
+    position: absolute;
+    background: url('tear-png-33473.png') no-repeat center;
+    background-size: contain;
+    width: 80px; /* Adjust the size of the tear drops */
+    height: 80px;
+    animation: move-down 6s linear infinite;
+}
+
+@keyframes move-down {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(calc(100vh - 80px)); /* 80px is the height of the tear drops */
+    }
+}
+
+.tear-drop-left {
+    left: 10%; /* Adjust the left position of the left tear drop */
+}
+
+.tear-drop-right {
+    right: 10%; /* Adjust the right position of the right tear drop */
+}
+
+
 
 .dreamscape-2 {
-    background: #e74c3c;
+    background: url('fog-4436636_1280.jpg') no-repeat center;
+    background-size: cover;
+    font-family: 'Comic Sans MS', cursive; /* Change the font family */
+    color: #b7938f; /* Change the font color */
+    
+}
+.bird {
+    position: absolute;
+    background: url('birds-png-3490.png') no-repeat center;
+    background-size: contain;
+    width: 100px;
+    height: 60px;
+    animation: fly 8s linear infinite;
 }
 
-.dreamscape-3 {
-    background: #27ae60;
+@keyframes fly {
+    0% {
+        left: -10%;
+        transform: scaleX(1);
+    }
+    100% {
+        left: 110%;
+        transform: scaleX(-1);
+    }
 }
 
 @media screen and (min-width: 768px) {
-    .dreamscape-container {
-        background: #3498db;
+    .bird {
+        width: 150px;
+        height: 90px;
+        animation: fly 12s linear infinite;
     }
+}
 
+
+.dreamscape-3 {
+    background: url('thunderstorm-3625405_1280.jpg') no-repeat center;
+    background-size: cover;
+    font-family: 'Comic Sans MS', cursive; /* Change the font family */
+    color: #462675; /* Change the font color */
+}
+.moon {
+    position: absolute;
+    background: url('moon.png') no-repeat center;
+    background-size: cover;
+    width: 100px; /* Adjust the size of the moon element */
+    height: 100px;
+    top: 20px; /* Adjust the top position */
+    left: 20px; /* Adjust the left position */
+    z-index: 1; /* To make it appear in front of the background */
+}
+
+@media screen and (min-width: 768px) {
     .dreamscape-1 {
         opacity: 1;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    .dreamscape-container {
-        background: #e74c3c;
-    }
-
     .dreamscape-2 {
         opacity: 1;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .dreamscape-container {
-        background: #27ae60;
-    }
-
     .dreamscape-3 {
         opacity: 1;
     }
+
+
+.forest-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    animation: wind-sway 8s infinite alternate;
 }
+
+.tree, .bird {
+    position: absolute;
+    pointer-events: none;
+}
+
+.tree {
+    width: 300px;
+    height: 400px;
+    background: url('kisspng-tree-cartoon-purple-cartoon-tree-5aa314e635c8d0.9080497115206371582203.png') no-repeat center;
+    background-size: cover;
+    animation: tree-sway 5s infinite alternate;
+    top: 150px;
+}
+
+
+.tree-right {
+    top: 150px; /* Adjust the top value to move the right tree down */
+    right: 20px; /* Adjust the right value to position the right tree */
+}
+
+
+@keyframes wind-sway {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+@keyframes tree-sway {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(10px);
+    }
+}
+
+.floating-lines {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.floating-lines p {
+    font-size: 18px;
+    color: rgb(66, 55, 87);
+    animation: move-line 10s linear infinite;
+    display: inline;
+
+}
+
+@keyframes move-line {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
+
+}
+
+
+

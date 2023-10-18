@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+
+}
+body {
+    background-color: cadetblue;
+    transition:
+    background-color .3s;
+}
+
+.dark {
+    background-color: #495c5c;
+}
+
+.bg{
+    background-image: url(duck.jpeg);
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:-1;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.reveal {
+  opacity: 1;
+}
+.sidebar {
+    padding: 20px;
+    background-color: slategray;
+    color: white;
+    font-size: 20px;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    height: 100vh;
+    width: 250px;
+    text-align: center;
+    transition: right .5s;
+
+  }
+
+  .active{
+    right: 0;
+  }
+
+  .square{
+    height: 100px;
+    width: 100px;
+    background-color: slategray;
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+    transition: transform .3s;
+  }
+
+  .spin {
+    transform: rotate(-180deg);
+    background-color: bisque;
+  }

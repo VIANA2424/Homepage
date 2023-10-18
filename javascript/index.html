@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>javascript</title>
+        <link rel="stylesheet" href="main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    
+    <body>
+<!-- first we set up the button that is triggering our javascript -->
+<!-- note that the element doesn't need to be a <button> to work -->
+    <button onclick="change()">Click me...</button>
+    <div id="background-image" class="bg"></div>
+    <!-- this is the element that we will be altering with our javascript -->
+    <div id="menu" class="sidebar"> 
+        Main Menu
+    </div>
+    <div id="spinner" class="square"></div>
+
+    <script>
+        function change() {
+        var menu = document.getElementById("menu");
+        var spinner= document.getElementById("spinner");
+        var backgroundImage= document.getElementById("background-image");
+    
+          menu.classList.toggle("active");
+          spinner.classList.toggle("spin");
+          document.body.classList.toggle("dark")
+          backgroundImage.classList.toggle(
+            "reveal");
+        }
+        </script>
+    </body>
+</html>
