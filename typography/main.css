@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'kaushan';
+    src: url('kaushanscript-regular-webfont.woff2') format('woff2'),
+         url('kaushanscript-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: lightsalmon;
+}
+
+.defaults {
+    font-family: sdlakfja, Arial, Helvetica, sans-serif;
+}
+
+.google {
+    font-family: 'Zilla Slab', serif;
+    font-style: italic;
+    
+}
+
+.new-google {
+    font-family: 'Tilt Neon', sans-serif;
+    font-style: normal;
+
+}
+
+.squirrel{
+    font-family: 'kaushan', serif;
+}

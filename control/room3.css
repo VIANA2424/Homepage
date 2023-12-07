@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: "Courier New", Courier, monospace;
+    background-color: #0c0c0c;
+    color: #ffcc00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    
+        font-family: "Courier New", Courier, monospace;
+        background-image: url('halloween-hd-widescreen-backgrounds-wallpaper-preview.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center center;
+        color: #d35f29;
+        margin: 0;
+    
+}
+
+.room-container {
+    width: 100%;
+    text-align: center;
+}
+
+.candles {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto;
+}
+
+.candle {
+    width: 50px;
+    height: 150px;
+    background-color: #ffcc00;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.candle.unlit {
+    background-color: #333;
+}
+
+.hidden-message {
+    display: none;
+    margin: 20px;
+}

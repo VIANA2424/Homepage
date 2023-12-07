@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Courier New", Courier, monospace;
+    background-image: url('322283.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    color: #d35f29;
+    margin: 0;
+}
+
+.password-input-container {
+    text-align: center;
+    margin-top: 20px; 
+}
+
+.cool-bigger-password-input {
+    width: 200px; 
+    padding: 15px; 
+    font-size: 18px; 
+    border: 2px solid #ffcc00; 
+    background-color: #000;
+    color: #ffcc00;
+    border-radius: 50%; 
+    outline: none;
+}
+
+.password-input-container button {
+    margin-top: 10px; 
+}
+
+
+.jump-scare {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; 
+}
+
+.jump-scare img {
+    max-width: 80%;
+    max-height: 80%;
+    animation: jumpScareAnimation 0.5s;
+}
+
+@keyframes jumpScareAnimation {
+    0% {
+        transform: scale(0.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.hidden {
+    display: none; 
+}
+.pop-up {
+    display: none;
+    position: fixed;
+    top: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9); 
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 9999; 
+    text-align: center;
+}
+
+.success-pop-up {
+    color: #00FF00;
+}
+
+.failure-pop-up {
+    color: #FF0000;
+}

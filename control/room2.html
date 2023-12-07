@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>-</title>
+        <link rel="stylesheet" href="room2.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    
+    <body>
+        
+        <div class="room-container">
+            <h1>Welcome to Room 2</h1>
+            <p>This is the second room of your Halloween escape game.</p>
+            
+            <div class="clock" id="clock">
+            </div>
+        
+            <div class="password-input-container">
+                <label for="password">Enter the password:</label>
+                <input type="password" id="password" class="cool-bigger-password-input" placeholder="Halloween2023">
+                <button id="unlock">Unlock</button>
+            </div>
+        
+            <div class="hint" id="hint">What orange vegetable is often carved into scary faces and illuminated on Halloween?</div>
+            <p><a href="index.html">Go back to the main room</a></p>
+        
+            <div class="pop-up success-pop-up" id="successPopUp">
+                <div class="success-message" id="successMessage">Congratulations, you have passed!</div>
+            </div>
+            <div class="pop-up failure-pop-up" id="failurePopUp">
+                <div class="failure-message" id="failureMessage">Sorry, your password entered was incorrect. Please try again.</div>
+            </div>
+        </div>
+        
+        <script src="room2.js"></script>
+    </body>
+</html>

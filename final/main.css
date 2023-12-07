@@ -1,0 +1,341 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  overflow: hidden;
+  background-color: rgb(214, 214, 214);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.flipbook-sentence {
+  font-family: 'YourCursiveFont', cursive;
+  position:absolute;
+  left: 50%;
+  bottom: -140px; 
+  transform: translate(-50%);
+  z-index: 3; 
+  font-size: 10px; 
+}
+
+.sticker-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+/* Styles for stickers 1-10 at the top */
+.sticker1, .sticker2, .sticker3, .sticker4, .sticker5, .sticker6, .sticker7, .sticker8, .sticker9, .sticker10 {
+  width: 130px;
+  height: 130px;
+  margin: 5px;
+  float: left;
+  cursor: move;
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 1;
+}
+
+/* Styles for stickers 11-20 at the bottom */
+.sticker11, .sticker12, .sticker13, .sticker14, .sticker15, .sticker16, .sticker17, .sticker18, .sticker19, .sticker20 {
+  width: 130px;
+  height: 130px;
+  margin: 5px;
+  float: left;
+  cursor: move;
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 1;
+ position: relative;
+ top: 450px;
+}
+
+
+
+
+
+
+.sticker1 {
+  background-image: url('MagicEraser_231206_222652.PNG');
+  
+}
+
+.sticker2 {
+  background-image: url('MagicEraser_231206_222731.PNG');
+}
+
+.sticker3 {
+  background-image: url('MagicEraser_231206_222829.PNG');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.sticker4 {
+  background-image: url('MagicEraser_231206_222858.PNG');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.sticker5 {
+  background-image: url('MagicEraser_231206_222916.PNG');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.sticker6 {
+  background-image: url('MagicEraser_231206_223002.PNG');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.sticker7 {
+  background-image: url('MagicEraser_231206_223033.PNG');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.sticker8 {
+  background-image: url('MagicEraser_231206_223047.PNG');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.sticker9 {
+  background-image: url('MagicEraser_231206_223105.PNG');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.sticker10 {
+  background-image: url('MagicEraser_231206_223131.PNG');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.sticker11 {
+  background-image: url('MagicEraser_231206_223155.PNG');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.sticker12 {
+  background-image: url('MagicEraser_231206_223211.PNG');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.sticker13 {
+  background-image: url('MagicEraser_231206_223228.PNG');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.sticker14 {
+  background-image: url('MagicEraser_231206_223352.PNG');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.sticker15 {
+  background-image: url('MagicEraser_231206_223514.PNG');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+
+.sticker16 {
+  background-image: url('MagicEraser_231206_223548.PNG');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.sticker17 {
+  background-image: url('MagicEraser_231206_223614.PNG');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.sticker18 {
+  background-image: url('MagicEraser_231206_223627.PNG');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.sticker19 {
+  background-image: url('MagicEraser_231206_223723.PNG');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.sticker20 {
+  background-image: url('MagicEraser_231206_223741.PNG');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+
+.flipbook-container {
+  width: 1300px;
+  height: 500px;
+  perspective: 2000px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0; 
+}
+
+.flipbook {
+  width: 60%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  line-height: 300px;
+  background-image: url('Download\ premium\ vector\ of\ Vintage\ flower\ background\,\ old\ paper\ texture\ vector\ by\ Techi\ about\ ephemera\,\ camellia\ vintage\ flower\,\ vintage\ paper\ background\,\ background\,\ and\ beige\ 6233517.jpeg');
+  background-size: cover;
+  background-position: center;
+  transform: translateZ(1px);
+}
+
+.pen-container {
+  position: fixed;
+  top: 50%;
+  right: 5px; 
+  z-index: 3;
+  transform: translateY(-50%); /* Center the pen container vertically */
+}
+
+.pen {
+  width: 250px;
+  height: 350px;
+  background-image: url('MagicEraser_231207_034404.PNG');  /* Replace 'path-to-your-pen-image.png' with the actual path to your pen image */
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  position: absolute;
+  right: 20px; 
+  z-index: 4;
+  transform: translateY(-50%); /* Center the pen vertically */
+  
+}
+
+#pen-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5; /* Ensure the canvas is above other elements */
+  
+    border: 1px solid #000; /* Add a border for visibility */
+  
+  
+}
+
+
+
+.photo-placeholder {
+  width: 80px;
+  height: 60px;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  border: 2px dashed #333;
+  cursor: move;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.photo-placeholder img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.page,
+.photo-placeholder {
+  z-index: 1;
+  transform: translateZ(0);
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  line-height: 300px;
+  background-image: url('Download\ premium\ vector\ of\ Vintage\ flower\ background\,\ old\ paper\ texture\ vector\ by\ Techi\ about\ ephemera\,\ camellia\ vintage\ flower\,\ vintage\ paper\ background\,\ background\,\ and\ beige\ 6233517.jpeg'); /* Replace with your image path */
+  background-size: cover; 
+  background-position: center; 
+  transform: translateZ(1px);
+}
+
+.photo-placeholder {
+  width: 200px; 
+  height: 180px; 
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  cursor: move;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: none;
+}
+
+.photo-placeholder img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; /* Maintain aspect ratio while covering the entire space */
+  border: none;
+}
+
+.page,
+.photo-placeholder {
+  z-index: 1;
+  transform: translateZ(0);
+}
+
+
+.trash-can {
+  position: fixed;
+  top: 50%;
+  left: 100px; 
+  width: 50px;
+  height: 50px;
+  background-image: url('MagicEraser_231207_042502.PNG'); 
+  background-size: cover;
+  cursor: pointer;
+  z-index: 3;
+  transform: translateY(-50%); /* Center the trash can vertically */
+}
+
+
