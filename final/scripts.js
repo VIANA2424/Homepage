@@ -66,7 +66,6 @@ $(document).ready(function () {
     }
   });
 
-  // Make the pen draggable
   $('.pen').draggable({
     containment: 'body',
     scroll: false // Disable scrolling while dragging
@@ -74,21 +73,23 @@ $(document).ready(function () {
 
   const canvas = document.getElementById('pen-canvas');
   const context = canvas.getContext('2d');
-
   let isDrawing = false;
 
   canvas.addEventListener('mousedown', (e) => {
+    console.log('mousedown event');
     isDrawing = true;
     draw(e);
   });
 
   canvas.addEventListener('mousemove', (e) => {
+    console.log('mousemove event');
     if (isDrawing) {
       draw(e);
     }
   });
 
   canvas.addEventListener('mouseup', () => {
+    console.log('mouseup event');
     isDrawing = false;
     context.beginPath();
   });
@@ -110,22 +111,4 @@ $(document).ready(function () {
     context.beginPath();
     context.moveTo(x, y);
   }
-});
-canvas.addEventListener('mousedown', (e) => {
-  console.log('mousedown event');
-  isDrawing = true;
-  draw(e);
-});
-
-canvas.addEventListener('mousemove', (e) => {
-  console.log('mousemove event');
-  if (isDrawing) {
-    draw(e);
-  }
-});
-
-canvas.addEventListener('mouseup', () => {
-  console.log('mouseup event');
-  isDrawing = false;
-  context.beginPath();
 });
