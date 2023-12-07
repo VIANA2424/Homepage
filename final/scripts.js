@@ -97,7 +97,7 @@ $(document).ready(function () {
   function draw(e) {
     if (!isDrawing) return;
 
-    context.lineWidth = 5; // Set the line width as needed
+    context.lineWidth = 10; // Set the line width as needed
     context.lineCap = 'round';
     context.strokeStyle = 'black'; // Set the line color
 
@@ -111,4 +111,17 @@ $(document).ready(function () {
     context.beginPath();
     context.moveTo(x, y);
   }
+
+  let isPlaying = false; // Add this line
+
+  const audio = document.getElementById('audioPlayer'); // Add this line
+
+  $('#audioButton').on('click', function () {
+    if (isPlaying) {
+      audio.pause();
+    } else {
+      audio.play();
+    }
+    isPlaying = !isPlaying;
+  });
 });
